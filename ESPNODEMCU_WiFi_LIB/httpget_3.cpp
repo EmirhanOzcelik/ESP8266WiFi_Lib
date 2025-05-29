@@ -1,6 +1,6 @@
 #include "AG_LIB.h"
 
-// Basit URL encode (yalnızca boşlukları %20 yapar)
+// boşluklar %20 
 String urlEncode(const String &str)
 {
     String encoded = "";
