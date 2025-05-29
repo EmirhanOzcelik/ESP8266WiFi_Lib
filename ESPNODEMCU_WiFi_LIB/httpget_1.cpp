@@ -267,7 +267,6 @@ void Ag::web::siteGuvenlikBilgileriniAl(const char *domain)
         client.stop();
     }
 
-    // --- HTTP GET ve JSON parse fonksiyonu (iç fonksiyon olarak) ---
     auto httpGet = [](const String &url) -> String
     {
         HTTPClient http;
@@ -290,7 +289,6 @@ void Ag::web::siteGuvenlikBilgileriniAl(const char *domain)
         }
     };
 
-    // --- SSL Labs API çağrısı ---
     {
         String url = String("https://") + sslLabsApiHost + sslLabsApiPath + domain;
 
@@ -325,7 +323,6 @@ void Ag::web::siteGuvenlikBilgileriniAl(const char *domain)
         }
     }
 
-    // --- Whois API çağrısı ---
     {
         String url = String("https://") + whoisApiHost + whoisApiPath + domain;
 
