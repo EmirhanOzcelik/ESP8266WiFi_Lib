@@ -34,7 +34,6 @@ void Ag::web::zaman_al(int *sn, int *dk, int *saat, int *gun, int *ay, int *yil,
 
     unsigned long epochTime = timeClient.getEpochTime();
 
-    // epochTime'dan yerel tarih bilgisi oluştur
     time_t rawTime = (time_t)epochTime;
     struct tm *ptm = gmtime(&rawTime);
 
