@@ -210,12 +210,10 @@ bool Ag::baglanti::kayitli_aglardan(const String &ssid_list, const String &sifre
     std::vector<String> ssidler = satirlara_bol(ssid_list);
     std::vector<String> sifreler = satirlara_bol(sifre_list);
 
-    // Taranan her ağı kontrol et
     for (int i = 0; i < bulunan_ag_sayisi; ++i)
     {
         String mevcut_ssid = WiFi.SSID(i);
 
-        // Kayıtlı SSID'ler arasında eşleşme arıyoruz
         for (size_t j = 0; j < ssidler.size(); ++j)
         {
             if (mevcut_ssid == ssidler[j])
