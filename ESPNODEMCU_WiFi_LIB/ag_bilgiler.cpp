@@ -203,13 +203,10 @@ String Ag::ogren::cevredeki_aglar(uint8_t saniye, uint8_t dakika, uint8_t saat,
         Serial.println(F("Hiçbir ağ bulunamadı."));
         return F("Hiçbir ağ bulunamadı.\n");
     }
-
-    // İndeks sıralama dizisi
     int indices[n];
     for (int i = 0; i < n; ++i)
         indices[i] = i;
 
-    // Sinyal gücüne göre sıralama
     for (int i = 0; i < n - 1; ++i)
     {
         for (int j = i + 1; j < n; ++j)
@@ -237,8 +234,8 @@ String Ag::ogren::cevredeki_aglar(uint8_t saniye, uint8_t dakika, uint8_t saat,
         l = String(gun) + "/" + String(ay) + "/" + String(yil);
 
     String baslik = "{";
-    baslik += String(n) + ",";                  // Toplam ağ sayısı
-    baslik += String(en_yuksek_rssi) + " dBm,"; // En yüksek sinyal gücü
+    baslik += String(n) + ",";                
+    baslik += String(en_yuksek_rssi) + " dBm,"; 
     baslik += k;
     baslik += l;
     baslik += "}\n";
@@ -262,7 +259,6 @@ String Ag::ogren::cevredeki_aglar(uint8_t saniye, uint8_t dakika, uint8_t saat,
         guvenlik = (WiFi.encryptionType(idx) == WIFI_AUTH_OPEN) ? F("sifresiz") : F("sifreli");
 #endif
 
-        // SSID hizalama
         while (ssid.length() < 20)
             ssid += ' ';
 
