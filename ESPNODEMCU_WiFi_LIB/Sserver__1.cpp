@@ -20,7 +20,7 @@ bool aboneligi_kaldir(String veerri);
 /// @return baglanabilirse 1 baglanamazsa 0
 bool Ag::server::baglan()
 {
-    secureClient.setInsecure(); // Sertifika kontrolü devre dışı (test için)
+    secureClient.setInsecure(); 
     mqttClient.setServer(mqttServer.c_str(), mqttPort);
     if (_debug)
         Serial.println(F("[SERVER] Cloud sunucusuna bağlanılıyor..."));
