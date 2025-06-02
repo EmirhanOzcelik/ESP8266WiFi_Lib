@@ -1,8 +1,8 @@
-# ESP8266 WiFi Kütüphanesi: Hadi Başlayalım!
+# ESP8266 WiFi Kütüphanesi
 
-Bu kütüphane, ESP8266 NodeMCU kartlarınız için kablosuz ağ yönetimi, internetten veri çekme ve MQTT sunucu iletişimi gibi ağ işlerini kolaylaştıran kullanışlı bir pakettir!
+Bu kütüphane, ESP8266 NodeMCU kartlarınız için kablosuz ağ yönetimi, internetten veri çekme ve MQTT sunucu iletişimi gibi ağ işlerini kolaylaştıran kullanışlı bir pakettir
 
-## Kurulum Çok Basit!
+## Kurulum 
 
 1. Kütüphaneyi projenize ekleyin: Arduino IDE kullanıyorsanız, `AG_LIB.h`, `ag_bilgiler.cpp`, `baglantilar.cpp`, `httpget_1.cpp`, `httpget_2.cpp`, `httpget_3.cpp`, `Sserver__1.cpp` dosyalarını projenizin klasörüne taşıyın.
 
@@ -267,25 +267,3 @@ Bu kütüphane, ESP8266 NodeMCU kartlarınız için kablosuz ağ yönetimi, inte
   * **Parametreler:** Yok.
 
   * **Dönüş Değeri:** Yok.
-
-### Global Değişkenler ve Yardımcı Fonksiyonlar
-
-* **`extern WiFiClientSecure secureClient;`**
-
-  * **Açıklama:** HTTPS ve MQTT bağlantıları için güvenli WiFi istemcisi.
-
-* **`extern String mesaj;`**
-
-  * **Açıklama:** MQTT sunucusundan gelen mesajları depolayan global String değişkeni.
-
-* **`extern void arkaplanda_veriBekle(char *topic, byte *payload, unsigned int length);`**
-
-  * **Açıklama:** MQTT istemcisi tarafından çağrılan, gelen mesajları işleyip `mesaj` değişkenine ekleyen arka plan callback fonksiyonu.
-
-## Katkıda Bulunmak İster Misiniz?
-
-Kütüphaneye katkıda bulunmak isterseniz, pull request gönderin veya sorun (issue) açın!
-
-## Lisans Bilgileri
-
-Lisans detayları için depodaki `LICENSE` dosyasına bakın.
