@@ -1,0 +1,14 @@
+{
+  "name": "esp8266 wifi lib",
+  "version": "1.2",
+  "description": "ESP8266 için WiFi, DNS, NTP, JSON ve MQTT işlemlerini barındıran gelişmiş kütüphane",
+  "keywords": "wifi, esp8266, dns, ntp, json, mqtt, http",
+  "frameworks": "arduino",
+  "platforms": "espressif8266",
+  "dependencies": {
+    "me-no-dev/ESPAsyncTCP": "^1.2.2",
+    "bblanchon/ArduinoJson": "^7.1.0",
+    "knolleary/PubSubClient": "^2.8.0",
+    "arduino-libraries/NTPClient": "^3.2.1"
+  }
+}
